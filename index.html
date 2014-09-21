@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>assignment</title>
+  <meta name="description" content="">
+  <meta name="author" content="self">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/reveal.min.css">
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/theme/default.css" id="theme">
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" id="theme">
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->  <link rel="stylesheet" href = "assets/css/ribbons.css">
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section class='' data-state='' id='slide-1'>
+  <h2>Data exploration - introduction</h2>
+  <ol>
+<li>Assignment to analyze and screen monthly raw data</li>
+<li>Data screening is critical activity</li>
+<li>Huge amount is spend in big data analysis for data screening</li>
+<li>Significant as critical business decisions are made on the basis of data analysis</li>
+<li>Uses pollution data set in R as test case to explain the process</li>
+<li>Explores shiny to develop interactive dynamic web application</li>
+<li>Can be modified for analyzing any raw data </li>
+</ol>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>Scope of work</h2>
+  <ol>
+<li>Review the transactions data to identify errors
+
+<ul>
+<li>NA values</li>
+<li>Inconsistent values</li>
+<li>Missing data</li>
+</ul></li>
+<li>Provides following to felicitate this review
+
+<ul>
+<li>Month for data review can be dynamically selected</li>
+<li>Summary of the data for selected month displayed</li>
+<li>Graph for selected month and selected variable displayed to visualize inconsistency</li>
+<li>Selected number of records displayed to identify actual error </li>
+</ul></li>
+</ol>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>Input data</h2>
+  <ul>
+<li>uses ‘airquality’ in R data set as basis for explaining the process</li>
+<li>Data set contains five month data - May to September</li>
+<li>Number of observations 153 - one observation per day</li>
+<li>NA records are retained, as cleaning data with correct values is the objective of this exercise</li>
+<li>First five observations displayed below to explain the fields</li>
+</ul>
+
+<pre><code>##   Ozone Solar.R Wind Temp Month Day
+## 1    41     190  7.4   67     5   1
+## 2    36     118  8.0   72     5   2
+## 3    12     149 12.6   74     5   3
+## 4    18     313 11.5   62     5   4
+## 5    NA      NA 14.3   56     5   5
+</code></pre>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>Process details</h2>
+  <ol>
+<li><p>On opening in a browser</p>
+
+<ul>
+<li>Displays part of side panel in the left</li>
+<li>Displays default summary data for May and ozone graph for May</li>
+</ul></li>
+<li><p>Side panel in left allows dynamically to</p>
+
+<ul>
+<li>Change the month to display data through a pull down menu</li>
+<li>Change the graph variable by set of radio buttons</li>
+<li>Displays check books for viewing records</li>
+</ul></li>
+</ol>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>Process details ....contd,,,</h2>
+  <ol>
+<li> Clicking on the check box triggers the following:
+
+<ul>
+<li>Five observations for the seleced month is displayed below the graph</li>
+<li>Above the graph number of records displayed is shown</li>
+<li>Slider bar appears in the left panel that allows selection of records from 1 to 31</li>
+<li>Records shown dynamically changes based on the slide bar value</li>
+<li>clearing the checkbox clears everything shown on checking </li>
+</ul></li>
+</ol>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>Summary</h2>
+  <ul>
+<li>Shiny offers excellent framework for funtional area specialist to develop thier own web pages</li>
+<li>This assignment give a framework for creating error free data</li>
+<li>Graphical interfact privided isual inspection to identofy data error </li>
+<li>Observations can also be displayed to pin point error to initiiate corrective action</li>
+<li>End result is creation of error free observation that can be pushed to the final data set</li>
+</ul>
+
+</section>
+    </div>
+  </div>
+</body>
+  <script src="libraries/frameworks/revealjs/lib/js/head.min.js"></script>
+  <script src="libraries/frameworks/revealjs/js/reveal.min.js"></script>
+  <script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    theme: Reveal.getQueryHash().theme || 'default', 
+    transition: Reveal.getQueryHash().transition || 'default', 
+    dependencies: [
+    // Cross-browser shim that fully implements classList -
+    // https://github.com/eligrey/classList.js/
+      { src: 'libraries/frameworks/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList;}},
+      // Zoom in and out with Alt+click
+      { src: 'libraries/frameworks/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Speaker notes
+      { src: 'libraries/frameworks/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Remote control your reveal.js presentation using a touch device
+      //{ src: 'libraries/frameworks/revealjs/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+  });
+  </script>  <!-- LOAD HIGHLIGHTER JS FILES -->
+<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+ 
+
+</html>
